@@ -11,12 +11,13 @@ Original file is located at
 Read the Amtrak GTFS data. We need four text files: routes, trips, stops, and stop times. In addition, we gathered the route type information from Wikipedia: https://en.wikipedia.org/wiki/List_of_Amtrak_routes
 """
 
+!git clone https://github.com/RobertZhangAECOM/FRA-LDSS-Task-10.1-Analysis.git
 import pandas as pd
-routes = pd.read_csv('Amtrak_GTFS/routes.txt')
-trips = pd.read_csv('Amtrak_GTFS/trips.txt')
-stops = pd.read_csv('Amtrak_GTFS/stops.txt')
-stop_times = pd.read_csv('Amtrak_GTFS/stop_times.txt')
-route_types = pd.read_csv('Amtrak_GTFS/routetype.csv')
+routes = pd.read_csv('/content/FRA-LDSS-Task-10.1-Analysis/routes.txt')
+trips = pd.read_csv('/content/FRA-LDSS-Task-10.1-Analysis/trips.txt')
+stops = pd.read_csv('/content/FRA-LDSS-Task-10.1-Analysis/stops.txt')
+stop_times = pd.read_csv('/content/FRA-LDSS-Task-10.1-Analysis/stop_times.txt')
+route_types = pd.read_csv('/content/FRA-LDSS-Task-10.1-Analysis/routetype.csv')
 
 """We utilize the geopy library to perform reverse geocoding and determine the state associated with each stop in the stops DataFrame."""
 
@@ -67,7 +68,7 @@ df_summary = df_summary.merge(pivot, on='state', how='left').fillna(0)
 We read the preferred route CSV file containing route information and extracts state abbreviations from the station column. Then we use the us package to map these abbreviations to their full state names. Finally, we count unique routes by state and rename columns.
 """
 
-df_preferred = pd.read_csv('Amtrak_GTFS/preferred_routes.csv')
+df_preferred = pd.read_csv('/content/FRA-LDSS-Task-10.1-Analysis/preferred_routes.csv')
 df_preferred['state_abbr'] = df_preferred['station'].str.extract(r',\s*(\w{2})')
 
 def get_state_name(state_abbr):
