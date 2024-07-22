@@ -30,7 +30,7 @@ route_id,agency_id,route_short_name,route_long_name,route_type,route_url,route_c
 68,51,,Maple Leaf,2,https://www.amtrak.com/maple-leaf-train,CAE4F1,000000
 69,51,,Palmetto,2,https://www.amtrak.com/silver-service-palmetto-train,CAE4F1,000000
 70,51,,Silver Star,2,https://www.amtrak.com/silver-service-palmetto-train,CAE4F1,000000
-72,51,,Carl Sandburg/Illinois Zephyr,2,https://www.amtrak.com/illinois-services-train,CAE4F1,000000
+72,51,,Illinois Zephyr/Carl Sandburg,2,https://www.amtrak.com/illinois-services-train,CAE4F1,000000
 78,51,,Pacific Surfliner,2,https://www.amtrak.com/pacific-surfliner-train,CAE4F1,000000
 79,51,,Piedmont,2,https://www.amtrak.com/carolinian-piedmont-train,CAE4F1,000000
 81,51,,Lake Shore Limited,2,https://www.amtrak.com/lake-shore-limited-train,CAE4F1,000000
